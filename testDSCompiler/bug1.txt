@@ -1,0 +1,41 @@
+bugid=86
+> n-rank(result_bc)[bugid]+1
+[1] 13
+> n-rank(result_orig)[bugid]+1
+[1] 19
+> n-rank(result_clust)[bugid]+1
+[1] 1
+> n-rank(result_IVD)[bugid]+1
+[1] 31
+> n-rank(result_clust2)[bugid]+1
+[1] 1
+> n-rank(result_IVD2)[bugid]+1
+[1] 30
+> n-rank(result_bc_c)[bugid]+1
+[1] 32
+> n-rank(result_orig_c)[bugid]+1
+[1] 8
+> n-rank(result_IVD_c)[bugid]+1
+[1] 15
+> n-rank(result_clust_c)[bugid]+1
+[1] 1
+> n-rank(result_bc_sc)[bugid]+1
+[1] 32
+> n-rank(result_clust_sc)[bugid]+1
+[1] 79
+> n-rank(result_orig_sc)[bugid]+1
+[1] 8
+> n-rank(result_IVD_sc)[bugid]+1
+[1] 15
+> save.image("C:\\Users\\zhuofu\\RProject\\testDSCompiler\\V1")
+> n-rank(result_IVDO)[bugid]+1
+[1] 34
+> 
+> n-rank(result_IVDO2)[bugid]+1
+[1] 34
+> 
+> n-rank(result_IVDO_c)[bugid]+1
+[1] 2
+> 
+> n-rank(result_IVDO_sc)[bugid]+1
+[1] 1

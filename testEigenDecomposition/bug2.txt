@@ -1,0 +1,45 @@
+> bugid
+[1] 7
+> n-rank(result_bc)[bugid]+1
+[1] 176
+> n-rank(result_orig)[bugid]+1
+[1] 320
+> n-rank(result_clust)[bugid]+1
+[1] 205
+> n-rank(result_IVD)[bugid]+1
+[1] 227
+> n-rank(result_clust2)[bugid]+1
+[1] 205
+> n-rank(result_IVD2)[bugid]+1
+[1] 227
+> n-rank(result_bc_c)[bugid]+1
+[1] 267
+> n-rank(result_orig_c)[bugid]+1
+[1] 33
+> n-rank(result_IVD_c)[bugid]+1
+[1] 8
+> n-rank(result_clust_c)[bugid]+1
+[1] 216
+> n-rank(result_bc_sc)[bugid]+1
+[1] 267
+> n-rank(result_clust_sc)[bugid]+1
+[1] 156
+> n-rank(result_orig_sc)[bugid]+1
+[1] 33
+> n-rank(result_IVD_sc)[bugid]+1
+[1] 8
+
+ivd_paper
+
+> n-rank(result_IVD)[bugid]+1
+[1] 222
+> 
+> n-rank(result_IVD2)[bugid]+1
+[1] 222
+> 
+> n-rank(result_IVD_c)[bugid]+1
+[1] 15
+> 
+> n-rank(result_IVD_sc)[bugid]+1
+[1] 19
+> 

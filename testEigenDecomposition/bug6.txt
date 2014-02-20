@@ -1,0 +1,42 @@
+> bugid
+[1] 40
+> n-rank(result_bc)[bugid]+1
+[1] 1
+> n-rank(result_orig)[bugid]+1
+[1] 366.5
+> n-rank(result_clust)[bugid]+1
+[1] 1
+> n-rank(result_IVD)[bugid]+1
+[1] 209
+> n-rank(result_clust2)[bugid]+1
+[1] 3
+> n-rank(result_IVD2)[bugid]+1
+[1] 209
+> n-rank(result_bc_c)[bugid]+1
+[1] 27
+> n-rank(result_orig_c)[bugid]+1
+[1] 17
+> n-rank(result_IVD_c)[bugid]+1
+[1] 21
+> n-rank(result_clust_c)[bugid]+1
+[1] 4
+> n-rank(result_bc_sc)[bugid]+1
+[1] 27
+> n-rank(result_clust_sc)[bugid]+1
+[1] 75
+> n-rank(result_orig_sc)[bugid]+1
+[1] 17
+> n-rank(result_IVD_sc)[bugid]+1
+[1] 23
+
+> n-rank(result_IVD)[bugid]+1
+[1] 264
+> 
+> n-rank(result_IVD2)[bugid]+1
+[1] 264
+> 
+> n-rank(result_IVD_c)[bugid]+1
+[1] 35
+> 
+> n-rank(result_IVD_sc)[bugid]+1
+[1] 74

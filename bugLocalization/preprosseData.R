@@ -1,5 +1,5 @@
 preprosseData <- function (data_raw,y_raw,truth_raw,diff_raw) {
-  y <- data.matrix(y_raw[, 2])
+ 
   truth_raw<-data.matrix(truth_raw)
   diff_raw<-data.matrix(diff_raw)
   col <- ncol(data_raw)
@@ -8,6 +8,14 @@ preprosseData <- function (data_raw,y_raw,truth_raw,diff_raw) {
   if (length(naindex)!=0){
     data_raw<-data_raw[-naindex,];
   }
+  ##############remove the y with NaN output
+  naindex<-which(is.na(diff_raw))
+  if (length(naindex)!=0){
+    y_raw<-y_raw[-naindex,];
+    diff_raw<-as.matrix(diff_raw[-naindex,]);
+    truth_raw<-as.matrix(truth_raw[-naindex,]);
+  }
+  
   ##filter out the test case which does not cover the instrumented file
   #####################################################################
   common<-intersect(y_raw[,1], data_raw[,1]);
@@ -16,7 +24,7 @@ preprosseData <- function (data_raw,y_raw,truth_raw,diff_raw) {
   
   y_raw<-y_raw[indsy,];
   
-  y<-y[indsy, ];
+  y<-y_raw[,2];
   truth_raw<-truth_raw[indsy,];
   diff_raw<-diff_raw[indsy,];
   y_index<-y_raw[,1];

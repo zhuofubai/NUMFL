@@ -1,4 +1,3 @@
-
 buildPolynominal <- function (subdataX,subdataY,subtruth, ctrl=FALSE) {
   source('C:/Users/zhuofu/RProject/bugLocalization/standardize.R')
   subdataX2<-standardize(subdataX);
@@ -9,12 +8,19 @@ buildPolynominal <- function (subdataX,subdataY,subtruth, ctrl=FALSE) {
   
   if(ctrl){
   lmfit_ply<-lm(subdataY~I(subdataX2^2))
+  TempX=subdataX^2
+  if(sum(is.infinite(TempX))>0){
+    sdcoef<-0;
+    lmfit_ply_sc<-0;
+  }else{
   lmfit_ply_sc<-lm(subdataY~I(subdataX^2))
-  ts<-ncol(subdataX2)
+  sdcoef<-abs(coefficients(lmfit_ply_sc)[2]*sd(subdataX[,1])/sd(subdataY))
+  }
   
+  ts<-ncol(subdataX2)
   tvalue<-abs(summary(lmfit_ply)$coefficients[2*(ts+1)+2])
   coef<-abs(coefficients(lmfit_ply)[2])
-  sdcoef<-abs(coefficients(lmfit_ply_sc)[2]*sd(subdataX[,1])/sd(subdataY))
+  
   
   }
   else{
